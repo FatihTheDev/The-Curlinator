@@ -72,8 +72,9 @@ with mp_pose.Pose(min_detection_confidence=0.5, min_tracking_confidence=0.5) as 
         
         # Render image    
         cv2.imshow('Curl Counter', img)
+        key = cv2.waitKey(1)
 
-        if cv2.waitKey(10) & 0xFF == ord('q'):
+        if(key == 81 or key == 113):
             break
 
 cap.release()
